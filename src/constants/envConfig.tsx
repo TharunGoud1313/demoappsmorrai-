@@ -31,10 +31,10 @@ export const DOC_GROUP_API = `${BASE_URL}/doc_group`;
 export const MESSAGES_API = `${BASE_URL}/msg`;
 export const MSG_GROUP_API = `${BASE_URL}/msg_group`;
 
-export const CHAT_SESSION_API = `/${AMOGAAGENTS_URL}/Chat`;
-export const CHAT_MESSAGE_API = `/${AMOGAAGENTS_URL}/Message`;
-export const CHAT_GROUP_API = `/${AMOGAAGENTS_URL}/chat_group`;
-export const LATEST_MESSAGE_API = `/${AMOGAAGENTS_URL}/latest_message`;
+export const CHAT_SESSION_API = `${AMOGAAGENTS_URL}/Chat`;
+export const CHAT_MESSAGE_API = `${AMOGAAGENTS_URL}/Message`;
+export const CHAT_GROUP_API = `${AMOGAAGENTS_URL}/chat_group`;
+export const LATEST_MESSAGE_API = `${AMOGAAGENTS_URL}/latest_message`;
 
 export const EMAIL_LIST_API = `${BASE_URL}/email_list`;
 export const CREATE_IMAP_DETAILS_URL = `${BASE_URL}/user_catalog_data`;
