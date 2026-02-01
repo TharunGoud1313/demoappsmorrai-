@@ -2,7 +2,7 @@ import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import LinkedInProvider from "next-auth/providers/linkedin";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { NEXT_PUBLIC_API_KEY } from "@/constants/envConfig";
+import { BASE_URL, NEXT_PUBLIC_API_KEY } from "@/constants/envConfig";
 import { middlewareAPI } from "./auth-middleware";
 
 export const ssoProviders = [
@@ -33,7 +33,7 @@ export const ssoProviders = [
         const response = await middlewareAPI({
           email: credentials.email,
           password: credentials.password,})
-
+          console.log("response--",response)
           if(response){
             return response
           }
@@ -69,7 +69,7 @@ export const ssoProviders = [
         // Check if OTP is verified
         if (otpData.verified === true) {
           // Check if user exists in the database
-          const userResponse = await fetch("https://amogademo-postgrest.morr.biz/user_catalog", {
+          const userResponse = await fetch(`${BASE_URL}/user_catalog`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

@@ -212,7 +212,8 @@ const LoginPage = () => {
         email: data.email,
         password: data.password,
       });
-      if (!result?.error) {
+      console.log("result--",result)
+      if (result.ok) {
         router.push("/role_menu");
       } else {
         let text: any = document.getElementById("error-text");

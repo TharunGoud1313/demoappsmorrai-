@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,9 +22,27 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(dashboard)/dashboard/page.tsx", "src/middleware.ts", "src/auth.jsx", "instrumentation.ts", "src/components/dashboard/ChartTheme.tsx", "src/components/overview.tsx", "src/graphql/resolvers/orderResolvers.js", "src/components/form-builder-1/ChatPreview.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/(dashboard)/dashboard/page.tsx",
+    "src/middleware.ts",
+    "src/auth.jsx",
+    "instrumentation.ts",
+    "src/components/dashboard/ChartTheme.tsx",
+    "src/components/overview.tsx",
+    "src/graphql/resolvers/orderResolvers.js",
+    "src/components/form-builder-1/ChatPreview.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -1,6 +1,8 @@
+import { BASE_URL } from "@/constants/envConfig";
+
 export async function verifyEmailInDatabase(userId:any) {
   try {
-    const url = `https://amogademo-postgrest.morr.biz/user_catalog?user_catalog_id=eq.${userId}`;
+    const url = `${BASE_URL}/user_catalog?user_catalog_id=eq.${userId}`;
 
     const response = await fetch(url, {
       method: 'PATCH',

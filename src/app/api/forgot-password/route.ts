@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
+import { BASE_URL } from "@/constants/envConfig";
 
 const transporter = nodemailer.createTransport({
   host: "mail.morr.biz",
@@ -25,7 +26,7 @@ export async function POST(req: Request) {
     };
 
     const response = await fetch(
-      `https://amogademo-postgrest.morr.biz/user_catalog?user_email=eq.${email}`,
+      `${BASE_URL}/user_catalog?user_email=eq.${email}`,
       requestOptions
     );
     const users = await response.json();
@@ -39,7 +40,7 @@ export async function POST(req: Request) {
     const resetTokenExpiry = new Date(Date.now() + 60000).toISOString();
 
     const patchResponse = await fetch(
-      `https://amogademo-postgrest.morr.biz/user_catalog?user_email=eq.${email}`,
+      `${BASE_URL}/user_catalog?user_email=eq.${email}`,
       {
         method: "PATCH",
         headers: {

@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/constants/envConfig";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -6,7 +7,7 @@ export async function POST(req: Request) {
       console.log("token----",token)
 
       // Fetch user by reset token
-      const response = await fetch(`https://amogademo-postgrest.morr.biz/user_catalog?reset_token=eq.${token}`, {
+      const response = await fetch(`${BASE_URL}/user_catalog?reset_token=eq.${token}`, {
           method: "GET",
           headers: {
               "Content-Type": "application/json",
@@ -23,7 +24,7 @@ export async function POST(req: Request) {
       const email = users[0].user_email;
 
       // Update password and clear reset token fields
-      await fetch(`https://amogademo-postgrest.morr.biz/user_catalog?user_email=eq.${email}`, {
+      await fetch(`${BASE_URL}/user_catalog?user_email=eq.${email}`, {
           method: "PATCH",
           headers: {
               "Content-Type": "application/json",

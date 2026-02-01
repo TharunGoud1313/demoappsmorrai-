@@ -17,6 +17,8 @@ export async function middlewareAPI(credentials: {
       },
     });
 
+    console.log("users---",response)
+
     if (!response.ok) {
       throw new Error(`API error: ${response.statusText}`);
     }
@@ -26,6 +28,7 @@ export async function middlewareAPI(credentials: {
         user.user_email === credentials.email &&
         user.password === credentials.password
     );
+    console.log("user---", user)
 
     if (user) {
       return sessionData(user, apiType);
@@ -123,5 +126,8 @@ export async function middlewareAPI(credentials: {
         roles_json: user.roles_json,
       };
     }
+    
+    // Fallback return - this was missing
+    return null;
   }
 }
