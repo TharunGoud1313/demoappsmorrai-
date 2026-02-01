@@ -1,7 +1,6 @@
+import TaskChat from "@/components/Tasks/Chat/Chat";
 import dynamic from "next/dynamic";
-const TaskChat = dynamic(() => import("@/components/Tasks/Chat/Chat"), {
-  ssr: false,
-});
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

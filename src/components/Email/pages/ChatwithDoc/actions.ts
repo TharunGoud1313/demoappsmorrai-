@@ -8,7 +8,7 @@ export const generateResponse = async (
   prompt: string,
   documentData: string
 ) => {
-  ("use server");
+ 
   try {
     const result = await generateObject({
       model: openai("gpt-3.5-turbo"),

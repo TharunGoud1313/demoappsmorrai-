@@ -1,11 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const AssistantPage = dynamic(
-  () => import("@/components/Projects/Assistant/AssistantPage"),
-  {
-    ssr: false,
-  }
-);
+import AssistantPage from "@/components/Projects/Assistant/AssistantPage";
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

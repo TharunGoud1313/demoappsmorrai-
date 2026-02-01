@@ -1,8 +1,7 @@
+import NewDoBox from "@/components/DoBox/NewDoBox";
 import dynamic from "next/dynamic";
 
-const NewDoBox = dynamic(() => import("@/components/DoBox/NewDoBox"), {
-  ssr: false,
-});
+
 
 const Page = () => {
   return (

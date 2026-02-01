@@ -1,8 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const DoBoxDocs = dynamic(() => import("@/components/DoBox/Docs/Docs"), {
-  ssr: false,
-});
+import DoBoxDocs from "@/components/DoBox/Docs/Docs";
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

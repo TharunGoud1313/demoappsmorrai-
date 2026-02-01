@@ -1,10 +1,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Docs from "@/components/Docs/Docs";
-// import NewDocs from "@/components/Docs/NewDocs";
-const NewDocs = dynamic(() => import("@/components/myDocs/NewDoc"), {
-  ssr: false,
-});
+import NewDocs from "@/components/myDocs/NewDoc";
+
 
 const Page = () => {
   return <NewDocs isEdit={false} isView={false} />;

@@ -1,9 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import ViewFile from "@/components/Docs/ViewFile/ViewFile";
-const DoBoxDocs = dynamic(() => import("@/components/DoBox/Docs/Docs"), {
-  ssr: false,
-});
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

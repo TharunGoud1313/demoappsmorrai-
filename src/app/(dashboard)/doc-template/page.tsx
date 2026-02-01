@@ -1,9 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const DocTemplate = dynamic(
-  () => import("@/components/doc-template/DocTemplate"),
-  { ssr: false }
-);
+import DocTemplate from "@/components/doc-template/DocTemplate";
+
 
 const page = () => {
   return <DocTemplate />;

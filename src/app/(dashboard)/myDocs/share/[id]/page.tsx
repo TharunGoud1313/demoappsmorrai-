@@ -1,11 +1,7 @@
+import ShareToUsers from "@/components/myDocs/ShareToUsers/ShareToUsers";
 import dynamic from "next/dynamic";
 
-const ShareToUsers = dynamic(
-  () => import("@/components/myDocs/ShareToUsers/ShareToUsers"),
-  {
-    ssr: false,
-  }
-);
+
 
 const Page = ({ params }: { params: { id: string } }) => {
   return (

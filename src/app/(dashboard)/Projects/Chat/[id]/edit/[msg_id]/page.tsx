@@ -3,12 +3,8 @@ import React, { useEffect, useState } from "react";
 import { MESSAGES_API } from "@/constants/envConfig";
 import { toast } from "@/components/ui/use-toast";
 import dynamic from "next/dynamic";
-const NewProjectChat = dynamic(
-  () => import("@/components/Projects/Chat/NewChat"),
-  {
-    ssr: false,
-  }
-);
+import NewProjectChat from "@/components/Projects/Chat/NewChat";
+
 
 const EditProjectChatMsg = ({
   params,

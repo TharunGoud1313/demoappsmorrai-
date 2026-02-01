@@ -5,7 +5,7 @@ import { generateObject } from "ai";
 import { z } from "zod";
 
 export const generateEmail = async (input: string) => {
-  ("use server");
+  
   try {
     const result = await generateObject({
       model: openai("gpt-4o"),

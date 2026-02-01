@@ -17,7 +17,7 @@ export const ADD_DOC_FIELDS = `${BASE_URL}/mydoc_fields`;
 export const MY_DOC_LIST = `${BASE_URL}/mydoc_list`;
 export const MY_DOC_CONTENT = `${BASE_URL}/mydoc_content`;
 
-export const PAGE_LIST = `${BASE_URL}/page_list`;
+export const PAGE_LIST = `${BASE_URL}/temp_pagelist`;
 
 export const TEMPLATE_API = "https://nlg.morr.biz/templates";
 

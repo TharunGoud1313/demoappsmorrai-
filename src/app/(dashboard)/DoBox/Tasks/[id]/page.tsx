@@ -1,8 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const DoBoxTasks = dynamic(() => import("@/components/DoBox/Tasks/Tasks"), {
-  ssr: false,
-});
+import DoBoxTasks from "@/components/DoBox/Tasks/Tasks";
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

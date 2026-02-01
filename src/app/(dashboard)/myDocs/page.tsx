@@ -1,8 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const Doc = dynamic(() => import("@/components/myDocs/Doc"), {
-  ssr: false,
-});
+import Doc from "@/components/myDocs/Doc";
+
 
 const Page = () => {
   return <Doc />;

@@ -1,7 +1,6 @@
+import Task from "@/components/Tasks/Task/Task";
 import dynamic from "next/dynamic";
-const Task = dynamic(() => import("@/components/Tasks/Task/Task"), {
-  ssr: false,
-});
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

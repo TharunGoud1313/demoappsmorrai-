@@ -13,7 +13,7 @@ export const generateQuery = async (
   projectData: any
 ) => {
   console.log("dataFilter----", dataFilter);
-  ("use server");
+ 
   try {
     const result = await generateObject({
       model: openai("gpt-4o"),

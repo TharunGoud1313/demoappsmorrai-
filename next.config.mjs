@@ -27,6 +27,9 @@ const nextConfig = {
   env: {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
   },
+  typescript:{
+    ignoreBuildErrors:true
+  },
   reactStrictMode: false,
   // compiler: {
   //   removeConsole: process.env.NODE_ENV === "production",

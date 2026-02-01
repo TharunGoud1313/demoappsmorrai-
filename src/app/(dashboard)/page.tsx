@@ -4,12 +4,6 @@ import LogoutButton from "@/components/forms/logout-button";
 import React from "react";
 import dynamic from "next/dynamic";
 
-const ContactFetcher = dynamic(
-  () => import("@/components/Capacitor/ContactsFetcher"),
-  {
-    ssr: false, // 👈 ensure this only runs on client side
-  }
-);
 
 const Home = async () => {
   const session = await auth();

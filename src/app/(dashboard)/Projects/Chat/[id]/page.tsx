@@ -1,7 +1,5 @@
+import ProjectChat from "@/components/Projects/Chat/Chat";
 import dynamic from "next/dynamic";
-const ProjectChat = dynamic(() => import("@/components/Projects/Chat/Chat"), {
-  ssr: false,
-});
 
 const page = ({ params }: { params: { id: string } }) => {
   return (

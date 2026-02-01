@@ -1,7 +1,5 @@
+import StoryBuilderTabs from "@/components/story_builder/StoryBuilderTabs";
 import dynamic from "next/dynamic";
-const StoryBuilderTabs = dynamic(
-  () => import("@/components/story_builder/StoryBuilderTabs")
-);
 
 const StoryBuilder = () => {
   return (

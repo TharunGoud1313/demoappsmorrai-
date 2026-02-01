@@ -1,13 +1,12 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const ProjectDocs = dynamic(() => import("@/components/Projects/Docs/Docs"), {
-  ssr: false,
-});
+import NewProjectDocs from "@/components/Projects/Docs/NewDocs";
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (
     <div className="max-w-[800px]  w-full p-4 mx-auto">
-      <ProjectDocs id={params.id} />
+      <NewProjectDocs id={params.id} />
     </div>
   );
 };

@@ -1,7 +1,6 @@
+import DoBoxChat from "@/components/DoBox/Chat/Chat";
 import dynamic from "next/dynamic";
-const DoBoxChat = dynamic(() => import("@/components/DoBox/Chat/Chat"), {
-  ssr: false,
-});
+
 
 const page = ({ params }: { params: { id: string } }) => {
   return (
