@@ -77,10 +77,10 @@ const Contacts = () => {
           </div>
         ) : (
           <div className="space-y-4 w-full">
-            {data
+            {data && data.length > 0 && data
               .filter((item: any) => {
                 const searchTerm = search.toLowerCase();
-                return item.user_name.toLowerCase().includes(searchTerm);
+                return item?.user_name?.toLowerCase().includes(searchTerm);
                 //   item.business_name.toLowerCase().includes(searchTerm)
               })
               .map((item: any) => (

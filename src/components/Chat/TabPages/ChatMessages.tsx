@@ -64,7 +64,7 @@ import { LocalNotifications } from "@capacitor/local-notifications";
 const socket = io(
   process.env.NODE_ENV === "development"
     ? "http://localhost:3002"
-    : "https://amoga-template-socket-1.onrender.com"
+    : "https://chat-socket-8ti0.onrender.com"
 );
 
 const ChatMessages = ({
