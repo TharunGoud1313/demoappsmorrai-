@@ -2,7 +2,8 @@
 
 import React, { useCallback, useState } from "react";
 
-import RcTiptapEditor, {
+import RcTiptapEditor from "reactjs-tiptap-editor";
+import {
   BaseKit,
   Blockquote,
   Bold,
@@ -36,7 +37,7 @@ import RcTiptapEditor, {
   SlashCommand,
   Strike,
   Table,
-} from "reactjs-tiptap-editor";
+} from "reactjs-tiptap-editor/extension-bundle";
 
 import "katex/dist/katex.min.css";
 

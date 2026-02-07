@@ -2,7 +2,8 @@
 
 import React, { useCallback, useState } from "react";
 
-import RcTiptapEditor, { BaseKit, Video } from "reactjs-tiptap-editor";
+import RcTiptapEditor from "reactjs-tiptap-editor";
+import { BaseKit, Video } from "reactjs-tiptap-editor/extension-bundle";
 
 import "katex/dist/katex.min.css";
 
