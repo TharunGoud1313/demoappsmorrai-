@@ -33,7 +33,7 @@ const Templates = () => {
   };
   return (
     <div>
-      {templates.map((template: any, index) => (
+      {templates && templates.length > 0 && templates.map((template: any, index) => (
         <Card key={template} className="flex flex-wrap relative mt-2.5 gap-2.5">
           <CardContent className="p-2.5 space-y-2.5 overflow-x-auto md:overflow-hidden">
             <h3>Template Name: {template.template_name}</h3>

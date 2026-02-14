@@ -69,27 +69,27 @@ export default function BuildTemplate() {
         return;
       }
 
-      const templateRequestOptions = {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Basic YWRtaW46cGFzc3dvcmQxMjM=",
-        },
-        body: JSON.stringify({ template: pugTemplate }),
-      };
-      const resultTemplate = await fetch(
-        `${TEMPLATE_API}/${templateName}`,
-        templateRequestOptions
-      );
-      const resultData = await resultTemplate.json();
+      // const templateRequestOptions = {
+      //   method: "PUT",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     Authorization: "Basic YWRtaW46cGFzc3dvcmQxMjM=",
+      //   },
+      //   body: JSON.stringify({ template: pugTemplate }),
+      // };
+      // const resultTemplate = await fetch(
+      //   `${TEMPLATE_API}/${templateName}`,
+      //   templateRequestOptions
+      // );
+      // const resultData = await resultTemplate.json();
 
-      if (!resultTemplate.ok) {
-        toast({
-          variant: "destructive",
-          description: "Failed to Create template",
-        });
-        return;
-      }
+      // if (!resultTemplate.ok) {
+      //   toast({
+      //     variant: "destructive",
+      //     description: "Failed to Create template",
+      //   });
+      //   return;
+      // }
 
       const header = new Headers();
       header.append("Content-Type", "application/json");
