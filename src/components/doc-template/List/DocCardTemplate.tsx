@@ -168,9 +168,9 @@ function DocCardTemplates() {
                     Created by: {item.created_user_name}
                   </span>
                   <div className="flex items-center gap-3">
-                    <Link href={`/doc_template`}>
+                    {/* <Link href={`/doc_template`}> */}
                       <File className="h-5 w-5 text-muted-foreground stroke-[1.5] cursor-pointer hover:text-foreground" />
-                    </Link>
+                    {/* </Link> */}
                     <ClipboardCheck className="h-5 w-5 text-muted-foreground stroke-[1.5] cursor-pointer hover:text-foreground" />
                     <Link href={`/doc-template/edit/${item.mydoc_id}`}>
                       <Edit className="h-5 w-5 text-muted-foreground hover:text-foreground" />

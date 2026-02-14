@@ -32,7 +32,7 @@ const MyDocTemplates = () => {
         const filteredData = response.data.filter((item: any) =>
           item?.users_json?.includes(session?.user?.email)
         );
-        setTemplates(filteredData);
+        setTemplates(response.data);
       } catch (err) {
         console.log("error----", err);
       }
