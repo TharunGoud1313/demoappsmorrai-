@@ -33,13 +33,15 @@ const Templates = () => {
   };
   return (
     <div>
-      {templates && templates.length > 0 && templates.map((template: any, index) => (
-        <Card key={template} className="flex flex-wrap relative mt-2.5 gap-2.5">
+      {templates && templates.length > 0 && templates.map((template: any, index) => {
+        console.log("template---",template)
+        return(
+        <Card key={template.story_id} className="flex flex-wrap relative mt-2.5 gap-2.5">
           <CardContent className="p-2.5 space-y-2.5 overflow-x-auto md:overflow-hidden">
             <h3>Template Name: {template.template_name}</h3>
             <p>Template Type: {template.template_type}</p>
-            <p>Template JSON: {template.template_json}</p>
-            <p>PUG Template: {template.pug_template}</p>
+            <p>Template JSON: {typeof template.template_json === 'object' ? JSON.stringify(template.template_json, null, 2) : template.template_json}</p>
+            <p>PUG Template: {typeof template.pug_template === 'object' ? JSON.stringify(template.pug_template, null, 2) : template.pug_template}</p>
             <p>Story API URL: {template.story_api_url}</p>
           </CardContent>
           <div className="absolute right-2 top-5">
@@ -49,7 +51,7 @@ const Templates = () => {
             />
           </div>
         </Card>
-      ))}
+      )})}
     </div>
   );
 };
